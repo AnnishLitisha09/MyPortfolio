@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
+import resume from "../assets/resume/annish_litisha.pdf";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -44,8 +46,8 @@ const Navbar = () => {
         >
           <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
           <p className='text-white text-[18px] font-bold cursor-pointer flex '>
-            Aswath &nbsp;
-            <span className='sm:block hidden'> | Mobile App Developer</span>
+            Annish Litisha &nbsp;
+            <span className='sm:block hidden'> | Fullstack Developer</span>
           </p>
         </Link>
 
@@ -58,7 +60,19 @@ const Navbar = () => {
               } hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              {nav.id === "resume" ? (
+                <a
+                  href={resume}
+                  download="Annish_Litisha_Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => toast.success("Resume download started!")}
+                >
+                  {nav.title}
+                </a>
+              ) : (
+                <a href={`#${nav.id}`}>{nav.title}</a>
+              )}
             </li>
           ))}
         </ul>

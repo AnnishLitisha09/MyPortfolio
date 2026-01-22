@@ -23,8 +23,10 @@ import {
   jobit,
   tripguide,
   threejs,
-  Attandance,
-  aeroplan
+  ExpenceManager,
+  assetManagement,
+  disasterReady,
+  aws,
 } from "../assets";
 
 export const navLinks = [
@@ -40,6 +42,10 @@ export const navLinks = [
     id: "contact",
     title: "Contact",
   },
+  {
+    id: "resume",
+    title: "Download Resume",
+  },
 ];
 
 const services = [
@@ -48,7 +54,7 @@ const services = [
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "React & React Native Developer",
     icon: mobile,
   },
   {
@@ -56,7 +62,7 @@ const services = [
     icon: backend,
   },
   {
-    title: "DevOps",
+    title: "Cloud & DevOps",
     icon: creator,
   },
 ];
@@ -83,10 +89,6 @@ const technologies = [
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
     name: "Tailwind CSS",
     icon: tailwind,
   },
@@ -97,10 +99,6 @@ const technologies = [
   {
     name: "MongoDB",
     icon: mongodb,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
   },
   {
     name: "git",
@@ -114,17 +112,21 @@ const technologies = [
     name: "docker",
     icon: docker,
   },
+  {
+    name: "aws",
+    icon: aws,
+  },
 ];
 
 const experiences = [
   {
-    title: "React Native Developer",
-    company_name: "Crayon'd",
+    title: "Flutter Developer",
+    company_name: "Indran Tech IT Solutions",
     // icon: starbucks,
     iconBg: "#383E56",
-    date: "September 2024 - present",
+    date: "June 2024 - January 2025",
     points: [
-      "Developing and maintaining mobile applications using React Native and related technologies.",
+      "Developing and maintaining mobile applications using Flutter and related technologies.",
       "Collaborating with cross-functional teams, including UI/UX designers, product managers, and other developers, to deliver high-quality mobile applications.",
       "Implementing responsive designs and ensuring compatibility across both iOS and Android platforms.",
       "Participating in code reviews and providing constructive feedback to improve code quality and maintain best practices.",
@@ -144,7 +146,7 @@ const experiences = [
   //   ],
   // },
   // {
-  //   title: "Aswathm",
+  //   title: "Annish Litisham",
   //   company_name: "Shopify",
   //   icon: shopify,
   //   iconBg: "#383E56",
@@ -200,28 +202,41 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Attandance",
+    name: "Income Expense Tracker",
     description:
-      "A mobile-based platform built with React Native that enables users to manage attendance, view results, and have complete control over academic records, providing a convenient and efficient solution for educational management.",
+      "A cross-platform expense management application developed using Flutter and Firebase that allows users to track income and expenses in real time. Designed with an intuitive UI and seamless backend integration, enabling efficient financial monitoring and data synchronization across devices.",
     tags: [
       {
         name: "Flutter",
         color: "blue-text-gradient",
       },
+    ],
+    image: ExpenceManager,
+    source_code_link: "https://github.com/AnnishLitisha09/Refil-Wealth.git"
+  },
+  {
+    name: "Audit asset managing application",
+    description:
+    "A student–faculty mobile platform developed using React Native, Node.js, Express.js, and SQL featuring 20+ screens and 20+ REST APIs. Integrated an AI chatbot to automate academic query handling, reducing manual workload by approximately 35% during simulated user testing.",
+    tags: [
+      {
+        name: "react Native",
+        color: "blue-text-gradient",
+      },
       // {
-      //   name: "mongodb",
+      //   name: "restapi",
       //   color: "green-text-gradient",
       // },
       // {
-      //   name: "tailwind",
+      //   name: "scss",
       //   color: "pink-text-gradient",
       // },
     ],
-    image: Attandance,
-    source_code_link: "https://github.com/VijayAdithP/Faculty-app",
+    image: assetManagement,
+    source_code_link: "https://github.com/AnnishLitisha09/AuditingApp.git",
   },
   {
-    name: "Aviator X design",
+    name: "Disaster Readiness Application",
     description:
       "A mobile application built with React Native that enables users to engage in political discussions, participate in group chats, and explore political events or meetups on interactive maps based on their current location.",
     tags: [
@@ -238,9 +253,10 @@ const projects = [
       //   color: "pink-text-gradient",
       // },
     ],
-    image: aeroplan,
-    source_code_link: "https://github.com/",
+    image: disasterReady,
+    source_code_link: "https://github.com/AnnishLitisha09/DisasterReady360.git",
   },
+
   // {
   //   name: "Trip Guide",
   //   description:

@@ -49,7 +49,7 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-I'm a skilled mobile app developer with experience in JavaScript and TypeScript, specializing in frameworks like React Native and Flutter. I have a passion for creating intuitive, scalable, and high-performance mobile applications that provide exceptional user experiences. Let's collaborate to turn your ideas into innovative mobile solutions!
+I'm a skilled mobile and web application developer with experience in JavaScript and TypeScript, specializing in frameworks like React, React Native and Flutter. I have a passion for creating intuitive, scalable, and high-performance mobile applications that provide exceptional user experiences. Let's collaborate to turn your ideas into innovative mobile solutions!
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>

@@ -27,10 +27,12 @@ import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 
 import carrent from "./carrent.png";
-import Attandance from './Project/Attendance.png';
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
-import aeroplan from "./Project/aeroplan.png";
+import ExpenceManager from "./expenceManager.png"
+import assetManagement from "./assetManagement.png";
+import disasterReady from "./disasterReady.png";
+import aws from "./tech/aws.png";
 
 export {
   logo,
@@ -59,8 +61,10 @@ export {
   starbucks,
   tesla,
   carrent,
-  Attandance,
   jobit,
   tripguide,
-  aeroplan,
+  ExpenceManager,
+  assetManagement,
+  disasterReady,
+  aws,
 };
