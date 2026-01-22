@@ -29,7 +29,7 @@ import tesla from "./company/tesla.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
-import ExpenceManager from "./expenceManager.png"
+import expenceManager from "./expenceManager.png"
 import assetManagement from "./assetManagement.png";
 import disasterReady from "./disasterReady.png";
 import aws from "./tech/aws.png";
@@ -63,7 +63,7 @@ export {
   carrent,
   jobit,
   tripguide,
-  ExpenceManager,
+  expenceManager,
   assetManagement,
   disasterReady,
   aws,

@@ -23,7 +23,7 @@ import {
   jobit,
   tripguide,
   threejs,
-  ExpenceManager,
+  expenceManager,
   assetManagement,
   disasterReady,
   aws,
@@ -211,7 +211,7 @@ const projects = [
         color: "blue-text-gradient",
       },
     ],
-    image: ExpenceManager,
+    image: expenceManager,
     source_code_link: "https://github.com/AnnishLitisha09/Refil-Wealth.git"
   },
   {
