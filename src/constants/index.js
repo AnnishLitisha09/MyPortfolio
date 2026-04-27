@@ -27,7 +27,12 @@ import {
   assetManagement,
   disasterReady,
   aws,
+  indran,
+  echo,
+  task_management,
+  bricksync,
 } from "../assets";
+
 
 export const navLinks = [
   {
@@ -51,19 +56,19 @@ export const navLinks = [
 const services = [
   {
     title: "Flutter Developer",
-    icon: web,
-  },
-  {
-    title: "React & React Native Developer",
     icon: mobile,
   },
   {
+    title: "React & React Native Developer",
+    icon: reactjs,
+  },
+  {
     title: "Backend Developer",
-    icon: backend,
+    icon: nodejs,
   },
   {
     title: "Cloud & DevOps",
-    icon: creator,
+    icon: docker,
   },
 ];
 
@@ -120,10 +125,23 @@ const technologies = [
 
 const experiences = [
   {
+    title: "Full Stack Developer Intern",
+    company_name: "Echo Digital Works, Tiruchengode",
+    icon: echo,
+    iconBg: "#fff",
+    date: "Oct 2024 - Feb 2025",
+    points: [
+      "A digital services company focused on software development.",
+      "Built full-stack web applications using React.js, Node.js, Express.js, and TypeScript for multi-user workflows.",
+      "Designed database schemas and optimized queries using Prisma ORM and Sequelize.",
+      "Developed an ORM-focused project solving complex client requirements for diverse companies.",
+    ],
+  },
+  {
     title: "Flutter Developer",
     company_name: "Indran Tech IT Solutions",
-    // icon: starbucks,
-    iconBg: "#383E56",
+    icon: indran,
+    iconBg: "#E6DEDD",
     date: "June 2024 - January 2025",
     points: [
       "Developing and maintaining mobile applications using Flutter and related technologies.",
@@ -132,45 +150,6 @@ const experiences = [
       "Participating in code reviews and providing constructive feedback to improve code quality and maintain best practices.",
     ],
   },
-  // {
-  //   title: "React Native Developer",
-  //   company_name: "Tesla",
-  //   icon: tesla,
-  //   iconBg: "#E6DEDD",
-  //   date: "Jan 2021 - Feb 2022",
-  //   points: [
-  //     "Developing and maintaining web applications using React.js and other related technologies.",
-  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-  //     "Implementing responsive design and ensuring cross-browser compatibility.",
-  //     "Participating in code reviews and providing constructive feedback to other developers.",
-  //   ],
-  // },
-  // {
-  //   title: "Annish Litisham",
-  //   company_name: "Shopify",
-  //   icon: shopify,
-  //   iconBg: "#383E56",
-  //   date: "Jan 2022 - Jan 2023",
-  //   points: [
-  //     "Developing and maintaining web applications using React.js and other related technologies.",
-  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-  //     "Implementing responsive design and ensuring cross-browser compatibility.",
-  //     "Participating in code reviews and providing constructive feedback to other developers.",
-  //   ],
-  // },
-  // {
-  //   title: "Full stack Developer",
-  //   company_name: "Meta",
-  //   icon: meta,
-  //   iconBg: "#E6DEDD",
-  //   date: "Jan 2023 - Present",
-  //   points: [
-  //     "Developing and maintaining web applications using React.js and other related technologies.",
-  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-  //     "Implementing responsive design and ensuring cross-browser compatibility.",
-  //     "Participating in code reviews and providing constructive feedback to other developers.",
-  //   ],
-  // },
 ];
 
 const testimonials = [
@@ -202,6 +181,48 @@ const testimonials = [
 
 const projects = [
   {
+    name: "TaskSync – Management & Governance",
+    description:
+      "A high-compliance task management system featuring role-based workflows, scheduling, and approval mechanisms. Built with a focus on accountability, it implements task lifecycle tracking, automated escalation handling, and detailed audit logging to ensure operational transparency and compliance.",
+    tags: [
+      {
+        name: "Flutter",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Node.js",
+        color: "green-text-gradient",
+      },
+      {
+        name: "SQL",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: task_management,
+    source_code_link: "https://github.com/AnnishLitisha09/",
+  },
+  {
+    name: "BrickSync – Order & Operations Management",
+    description:
+      "BrickSync is an all-in-one industrial ERP solution designed to digitize and automate complex daily operations. It enables real-time monitoring of vehicle logistics and fuel efficiency while centralizing workforce attendance. By integrating material procurement, sales pipelines, and customer management into a unified dashboard, it replaces fragmented manual processes with data-driven operational control.",
+    tags: [
+      {
+        name: "React.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "SQL",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Express.js",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: bricksync,
+    source_code_link: "https://github.com/AnnishLitisha09/",
+  },
+  {
     name: "Income Expense Tracker",
     description:
       "A cross-platform expense management application developed using Flutter and Firebase that allows users to track income and expenses in real time. Designed with an intuitive UI and seamless backend integration, enabling efficient financial monitoring and data synchronization across devices.",
@@ -210,6 +231,10 @@ const projects = [
         name: "Flutter",
         color: "blue-text-gradient",
       },
+      {
+        name: "Firebase",
+        color: "green-text-gradient",
+      },
     ],
     image: expenceManager,
     source_code_link: "https://github.com/AnnishLitisha09/Refil-Wealth.git"
@@ -217,20 +242,16 @@ const projects = [
   {
     name: "Audit asset managing application",
     description:
-    "A student–faculty mobile platform developed using React Native, Node.js, Express.js, and SQL featuring 20+ screens and 20+ REST APIs. Integrated an AI chatbot to automate academic query handling, reducing manual workload by approximately 35% during simulated user testing.",
+      "A student–faculty mobile platform developed using React Native, Node.js, Express.js, and SQL featuring 20+ screens and 20+ REST APIs. Integrated an AI chatbot to automate academic query handling, reducing manual workload by approximately 35% during simulated user testing.",
     tags: [
       {
-        name: "react Native",
+        name: "React Native",
         color: "blue-text-gradient",
       },
-      // {
-      //   name: "restapi",
-      //   color: "green-text-gradient",
-      // },
-      // {
-      //   name: "scss",
-      //   color: "pink-text-gradient",
-      // },
+      {
+        name: "Node.js",
+        color: "green-text-gradient",
+      },
     ],
     image: assetManagement,
     source_code_link: "https://github.com/AnnishLitisha09/AuditingApp.git",
@@ -241,43 +262,14 @@ const projects = [
       "A mobile application built with React Native that enables users to engage in political discussions, participate in group chats, and explore political events or meetups on interactive maps based on their current location.",
     tags: [
       {
-        name: "react Native",
+        name: "React Native",
         color: "blue-text-gradient",
       },
-      // {
-      //   name: "restapi",
-      //   color: "green-text-gradient",
-      // },
-      // {
-      //   name: "scss",
-      //   color: "pink-text-gradient",
-      // },
     ],
     image: disasterReady,
     source_code_link: "https://github.com/AnnishLitisha09/DisasterReady360.git",
   },
-
-  // {
-  //   name: "Trip Guide",
-  //   description:
-  //     "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-  //   tags: [
-  //     {
-  //       name: "nextjs",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "supabase",
-  //       color: "green-text-gradient",
-  //     },
-  //     {
-  //       name: "css",
-  //       color: "pink-text-gradient",
-  //     },
-  //   ],
-  //   image: tripguide,
-  //   source_code_link: "https://github.com/",
-  // },
 ];
 
 export { services, technologies, experiences, testimonials, projects };
+

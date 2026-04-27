@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
-import resume from "../assets/resume/annish_litisha.pdf";
 import toast from "react-hot-toast";
+
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -31,8 +31,8 @@ const Navbar = () => {
     <nav
       className={`${
         styles.paddingX
-      } w-full flex items-center py-5 fixed top-0 z-20 ${
-        scrolled ? "bg-primary" : "bg-transparent"
+      } w-full flex items-center py-5 fixed top-0 z-30 transition-all duration-300 ${
+        scrolled ? "bg-primary/80 backdrop-blur-lg border-b border-white/10" : "bg-transparent"
       }`}
     >
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
@@ -44,8 +44,12 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
-          <p className='text-white text-[18px] font-bold cursor-pointer flex '>
+          <img 
+            src={logo} 
+            alt='logo' 
+            className='w-10 h-10 sm:w-12 sm:h-12 object-contain flex-shrink-0 hover:rotate-[360deg] transition-all duration-700 cursor-pointer' 
+          />
+          <p className='text-white text-[16px] sm:text-[18px] font-bold cursor-pointer flex whitespace-nowrap'>
             Annish Litisha &nbsp;
             <span className='sm:block hidden'> | Fullstack Developer</span>
           </p>
@@ -62,11 +66,8 @@ const Navbar = () => {
             >
               {nav.id === "resume" ? (
                 <a
-                  href={resume}
+                  href="/resume.pdf"
                   download="Annish_Litisha_Resume.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => toast.success("Resume download started!")}
                 >
                   {nav.title}
                 </a>
@@ -102,7 +103,16 @@ const Navbar = () => {
                     setActive(nav.title);
                   }}
                 >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
+                  {nav.id === "resume" ? (
+                    <a
+                      href="/resume.pdf"
+                      download="Annish_Litisha_Resume.pdf"
+                    >
+                      {nav.title}
+                    </a>
+                  ) : (
+                    <a href={`#${nav.id}`}>{nav.title}</a>
+                  )}
                 </li>
               ))}
             </ul>

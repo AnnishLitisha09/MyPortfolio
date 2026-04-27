@@ -1,7 +1,4 @@
 import React from "react";
-// import Tilt from "react-tilt";
-import Tilt from "react-parallax-tilt";
-
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
@@ -10,31 +7,26 @@ import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
 const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className='xs:w-[250px] w-full'>
+  <div className='xs:w-[250px] w-full'>
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
+      className='w-full p-[1px] rounded-[20px] bg-gradient-to-br from-[#915EFF] to-[#00cea8] shadow-card'
     >
       <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
+        className='bg-[#151030] rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
       >
         <img
           src={icon}
-          alt='web-development'
+          alt={title}
           className='w-16 h-16 object-contain'
         />
 
-        <h3 className='text-white text-[20px] font-bold text-center'>
+        <h3 className='text-white text-[18px] font-bold text-center leading-[24px]'>
           {title}
         </h3>
       </div>
     </motion.div>
-  </Tilt>
+  </div>
 );
 
 const About = () => {
@@ -49,11 +41,11 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-I'm a skilled mobile and web application developer with experience in JavaScript and TypeScript, specializing in frameworks like React, React Native and Flutter. I have a passion for creating intuitive, scalable, and high-performance mobile applications that provide exceptional user experiences. Let's collaborate to turn your ideas into innovative mobile solutions!
+I'm a skilled mobile and web application developer with experience in JavaScript and TypeScript, specializing in frameworks like React, React Native and Flutter. I have a passion for creating intuitive, scalable, and high-performance applications. My core strength lies in **critical thinking and problem solving**, allowing me to turn complex technical challenges into efficient, user-centric solutions. Let's collaborate to bring your ideas to life!
       </motion.p>
 
-      <div className='mt-20 flex flex-wrap gap-10'>
-        {services.map((service, index) => (
+      <div className='mt-20 flex flex-wrap gap-10 justify-center'>
+        {services.slice(0, 4).map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
       </div>

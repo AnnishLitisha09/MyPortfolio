@@ -33,6 +33,12 @@ import expenceManager from "./expenceManager.png"
 import assetManagement from "./assetManagement.png";
 import disasterReady from "./disasterReady.png";
 import aws from "./tech/aws.png";
+import indran from "./company/indran_tech.png";
+import echo from "./company/echo.png";
+import task_management from "./task_management.png";
+import bricksync from "./bricksync.png";
+import hero_fallback from "./hero_fallback.png";
+
 
 export {
   logo,
@@ -60,7 +66,14 @@ export {
   shopify,
   starbucks,
   tesla,
+  indran,
+  echo,
+  task_management,
+  bricksync,
+  hero_fallback,
   carrent,
+
+
   jobit,
   tripguide,
   expenceManager,
@@ -68,3 +81,4 @@ export {
   disasterReady,
   aws,
 };
+

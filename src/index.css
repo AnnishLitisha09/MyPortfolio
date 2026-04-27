@@ -4,14 +4,25 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
+html, body, #root {
+  background-color: #050816 !important;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
   color-scheme: dark;
+  overflow-x: hidden;
 }
+
+
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 
 .hash-span {
   margin-top: -100px;
